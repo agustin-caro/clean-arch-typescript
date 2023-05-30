@@ -21,6 +21,7 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "import/no-absolute-path": "off",
         "space-before-function-paren": [
             2,
             {

@@ -1,8 +1,8 @@
 import User from '~/domain/entities/user'
 import { Request, Response } from 'express'
-import { createUserUseCaseInstance, getUseByIdUseCaseInstance } from '~/dependencies'
+import { createUserUseCaseInstance, getUseByIdUseCaseInstance } from '~/configs/UseCaseConfig'
 
-export default class userHandler {
+class UserHandler {
   createUser(req: Request, res: Response) {
     const user = req.body as User
     createUserUseCaseInstance.execute(user)
@@ -15,3 +15,5 @@ export default class userHandler {
     res.send(user)
   }
 }
+
+export default UserHandler
